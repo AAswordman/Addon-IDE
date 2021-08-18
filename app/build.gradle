@@ -1,0 +1,42 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.1.1"
+
+    defaultConfig {
+        applicationId "com.addon.tool"
+        minSdkVersion 16
+        targetSdkVersion 27
+<<<<<<< HEAD
+        versionCode 3
+        versionName "1.0.1"
+=======
+        versionCode 2
+        versionName "1.0.0"
+>>>>>>> aa41e3931568d839484ad45420af53d27f2b4d68
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+	
+    api project(':leveldb')
+    compile 'com.android.support:appcompat-v7:27.1.1'
+	compile 'com.android.support:design:27.1.1'
+<<<<<<< HEAD
+    compile "org.java-websocket:Java-WebSocket:1.3.8"
+	compile 'com.android.support:cardview-v7:24.2.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+=======
+    
+	compile 'com.android.support:cardview-v7:24.2.0'
+>>>>>>> aa41e3931568d839484ad45420af53d27f2b4d68
+    implementation 'com.github.andyxialm:ColorDialog:1.0.0'
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}

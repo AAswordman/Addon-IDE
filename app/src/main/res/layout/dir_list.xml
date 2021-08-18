@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:gravity="center"
+	android:padding="10dp">
+
+	<ImageView
+		android:layout_height="50dp"
+		android:layout_width="50dp"
+		android:src="@drawable/ic_folder_outline"
+		android:layout_marginTop="10dp"
+		android:id="@+id/img"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:text="我是文件夹"
+		android:textColor="#FF363636"
+		android:id="@+id/name"
+		android:maxLines="2"
+		android:minLines="2"
+		android:gravity="center_horizontal"
+		android:minWidth="100dp"
+		android:maxWidth="100dp"/>
+
+</LinearLayout>
+

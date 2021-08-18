@@ -1,0 +1,144 @@
+{
+  "Edit": {
+    "query.*": {}
+  },
+  "File": {
+    "manifest.json": {
+      "/": {
+        "~": "k"
+      },
+      "/header/": {
+        "~": "k"
+      },
+      "/modules/0/": {
+        "~": "k"
+      },
+      "/dependencies/0/": {
+        "~": "k"
+      }
+    },
+    "items": {
+      "/": {
+        "~": "k"
+      },
+      "/minecraft:item/": {
+        "~": "k"
+      },
+      "/minecraft:item/description/": {
+        "~": "k"
+      },
+      "/minecraft:item/components/": {
+        "~": "kv"
+      }
+    },
+    "blocks": {
+      "/": {
+        "~": "k"
+      },
+      "/minecraft:block/": {
+        "~": "k"
+      },
+      "/minecraft:block/description/": {
+        "~": "k"
+      },
+      "/minecraft:block/components/": {
+        "~": "kv"
+      }
+    },
+    "entities": {
+      "/": {
+        "~": "k"
+      },
+      "/minecraft:entity/": {
+        "~": "k"
+      },
+      "/minecraft:entity/description/": {
+        "~": "k"
+      },
+      "/minecraft:entity/component_groups/*/": {
+        "/minecraft:entity/component_groups/*/": "kv",
+        "/minecraft:entity/components/": "kv"
+      },
+      "/minecraft:entity/components/": {
+        "/minecraft:entity/component_groups/*/": "kv",
+        "/minecraft:entity/components/": "kv"
+      }
+    },
+    "biomes": {
+      "/": {
+        "~": "k"
+      },
+      "/minecraft:biome/": {
+        "~": "k"
+      },
+      "/minecraft:biome/description/": {
+        "~": "k"
+      },
+      "/minecraft:biome/components/": {
+        "~": "kv"
+      }
+    },
+    "features": {
+      "/": {
+        "~": "k"
+      },
+      "/minecraft:single_block_feature/": {
+        "~": "kv"
+      },
+      "/minecraft:aggregate_feature/": {
+        "~": "kv"
+      },
+      "/minecraft:ore_feature/": {
+        "~": "kv"
+      },
+      "/minecraft:cave_carver_feature/": {
+        "~": "kv"
+      },
+      "/minecraft:tree_feature/": {
+        "~": "kv"
+      },
+      "/minecraft:scatter_feature/": {
+        "~": "kv"
+      }
+    },
+    "feature_rules": {
+      "/": {
+        "~": "k"
+      },
+      "/minecraft:feature_rules/": {
+        "~": "k"
+      },
+      "/minecraft:feature_rules/description/": {
+        "~": "k"
+      },
+      "/minecraft:feature_rules/distribution/": {
+        "~": "kv"
+      },
+      "/minecraft:feature_rules/conditions/": {
+        "~": "kv"
+      }
+    },
+    "spawn_rules": {
+      "/": {
+        "~": "k"
+      },
+      "/minecraft:spawn_rules/": {
+        "~": "k"
+      },
+      "/minecraft:spawn_rules/description/": {
+        "~": "k"
+      },
+      "/minecraft:spawn_rules/conditions/*/": {
+        "~": "kv"
+      }
+    },
+    "recipes": {
+      "/": {
+        "~": "k"
+      },
+      "/minecraft:recipe_shaped/": {
+        "~": "k"
+      }
+    }
+  }
+}
