@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<RelativeLayout
+		android:layout_height="match_parent"
+		android:layout_width="match_parent">
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:orientation="vertical">
+
+			<android.support.design.widget.AppBarLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+				<android.support.v7.widget.Toolbar
+					android:id="@+id/toolbar"
+					android:layout_width="match_parent"
+					android:layout_height="?attr/actionBarSize"
+					app:layout_scrollFlags="exitUntilCollapsed|scroll|snap"
+					app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+				<LinearLayout
+					android:layout_height="wrap_content"
+					android:layout_width="match_parent"
+					android:background="#333333"
+					app:layout_scrollFlags="exitUntilCollapsed|scroll|snap"
+					android:orientation="horizontal"
+					android:focusable="true"
+					android:focusableInTouchMode="true"
+					android:gravity="center_vertical">
+
+					<ImageView
+						android:layout_height="38dp"
+						android:layout_width="38dp"
+						android:src="@drawable/ic_menu"
+						android:layout_margin="10dp"
+						android:id="@+id/tool"/>
+
+					<EditText
+						android:layout_height="wrap_content"
+						android:layout_width="match_parent"
+						android:layout_marginRight="10dp"
+						android:hint="路径"
+						android:text="/storage/emulated/0/"
+						android:gravity="center_vertical"
+						android:textSize="15sp"
+						android:id="@+id/path"
+						android:background="@drawable/list_btn_white"
+						android:padding="4dp"
+						android:textColor="#FF232323"/>
+
+				</LinearLayout>
+
+			</android.support.design.widget.AppBarLayout>
+
+			<android.support.v7.widget.RecyclerView
+				android:id="@+id/list"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+			android:orientation="vertical"
+			android:id="@+id/gery"
+			android:background="#9D595959"
+			android:visibility="gone"/>
+
+		<RelativeLayout
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+			android:id="@+id/menu"
+			android:visibility="visible">
+
+			<ImageView
+				android:layout_height="match_parent"
+				android:layout_width="match_parent"
+				android:src="@drawable/bg"
+				android:adjustViewBounds="true"
+				android:scaleType="fitXY"/>
+
+			<LinearLayout
+				android:layout_height="match_parent"
+				android:layout_width="match_parent"
+				android:orientation="vertical">
+
+				<LinearLayout
+					android:layout_height="wrap_content"
+					android:layout_width="match_parent"
+					android:orientation="horizontal"
+					android:gravity="center_vertical">
+
+					<ImageView
+						android:layout_height="38dp"
+						android:layout_width="38dp"
+						android:src="@drawable/ic_menu"
+						android:layout_margin="10dp"
+						android:id="@+id/tool2"/>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textAppearance="?android:attr/textAppearanceLarge"
+						android:text="全局设置"
+						android:textColor="#FFFFFFFF"
+						android:layout_marginLeft="10dp"/>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_height="wrap_content"
+					android:layout_width="match_parent"
+					android:orientation="vertical"
+					android:id="@+id/c"
+					android:visibility="gone">
+
+					<LinearLayout
+						android:layout_height="wrap_content"
+						android:layout_width="match_parent"
+						android:orientation="vertical"
+						android:id="@+id/c_b">
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="行为包:"
+							android:layout_margin="10dp"
+							android:textSize="15sp"
+							android:textColor="#FFFFFFFF"/>
+
+						<LinearLayout
+							android:layout_height="wrap_content"
+							android:layout_width="wrap_content"
+							android:orientation="horizontal"
+							android:layout_marginLeft="20dp"
+							android:id="@+id/c_b_a">
+
+							<ImageView
+								android:layout_height="20dp"
+								android:layout_width="20dp"
+								android:src="@drawable/ic_eye"/>
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:textAppearance="?android:attr/textAppearanceSmall"
+								android:text="工程路径查看"
+								android:textColor="#FFFFFBFB"
+								android:layout_marginLeft="4dp"/>
+
+						</LinearLayout>
+
+						<LinearLayout
+							android:layout_height="wrap_content"
+							android:layout_width="wrap_content"
+							android:orientation="horizontal"
+							android:layout_marginLeft="20dp"
+							android:layout_marginTop="4dp"
+							android:id="@+id/c_b_b">
+
+							<ImageView
+								android:layout_height="20dp"
+								android:layout_width="20dp"
+								android:src="@drawable/ic_link_variant_plus"/>
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:textAppearance="?android:attr/textAppearanceSmall"
+								android:text="样本路径查看"
+								android:textColor="#FFFFFBFB"
+								android:layout_marginLeft="4dp"/>
+
+						</LinearLayout>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_height="wrap_content"
+						android:layout_width="match_parent"
+						android:orientation="vertical"
+						android:id="@+id/c_r">
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="材质包"
+							android:layout_margin="10dp"
+							android:textSize="15sp"
+							android:textColor="#FFFFFFFF"/>
+
+						<LinearLayout
+							android:layout_height="wrap_content"
+							android:layout_width="wrap_content"
+							android:orientation="horizontal"
+							android:layout_marginLeft="20dp"
+							android:id="@+id/c_r_a">
+
+							<ImageView
+								android:layout_height="20dp"
+								android:layout_width="20dp"
+								android:src="@drawable/ic_eye"/>
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:textAppearance="?android:attr/textAppearanceSmall"
+								android:text="工程路径查看"
+								android:textColor="#FFFFFBFB"
+								android:layout_marginLeft="4dp"/>
+
+						</LinearLayout>
+
+						<LinearLayout
+							android:layout_height="wrap_content"
+							android:layout_width="wrap_content"
+							android:orientation="horizontal"
+							android:layout_marginLeft="20dp"
+							android:layout_marginTop="4dp"
+							android:id="@+id/c_r_b">
+
+							<ImageView
+								android:layout_height="20dp"
+								android:layout_width="20dp"
+								android:src="@drawable/ic_link_variant_plus"/>
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:textAppearance="?android:attr/textAppearanceSmall"
+								android:text="样本路径查看"
+								android:textColor="#FFFFFBFB"
+								android:layout_marginLeft="4dp"/>
+
+						</LinearLayout>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_height="wrap_content"
+						android:layout_width="match_parent"
+						android:orientation="vertical"
+						android:id="@+id/c_p">
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="PVZMOD:"
+							android:layout_margin="10dp"
+							android:textSize="15sp"
+							android:textColor="#FFFFFFFF"/>
+
+						<LinearLayout
+							android:layout_height="wrap_content"
+							android:layout_width="wrap_content"
+							android:orientation="horizontal"
+							android:layout_marginLeft="20dp"
+							android:id="@+id/c_p_a">
+
+							<ImageView
+								android:layout_height="20dp"
+								android:layout_width="20dp"
+								android:src="@drawable/ic_eye"/>
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:textAppearance="?android:attr/textAppearanceSmall"
+								android:text="工程路径查看"
+								android:textColor="#FFFFFBFB"
+								android:layout_marginLeft="4dp"/>
+
+						</LinearLayout>
+
+						<LinearLayout
+							android:layout_height="wrap_content"
+							android:layout_width="wrap_content"
+							android:orientation="horizontal"
+							android:layout_marginLeft="20dp"
+							android:layout_marginTop="4dp"
+							android:id="@+id/c_p_b">
+
+							<ImageView
+								android:layout_height="20dp"
+								android:layout_width="20dp"
+								android:src="@drawable/ic_link_variant_plus"/>
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:textAppearance="?android:attr/textAppearanceSmall"
+								android:text="样本路径查看"
+								android:textColor="#FFFFFBFB"
+								android:layout_marginLeft="4dp"/>
+
+						</LinearLayout>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content"
+						android:orientation="horizontal"
+						android:layout_marginLeft="10dp"
+						android:layout_marginTop="10dp"
+						android:gravity="center_vertical"
+						android:id="@+id/start">
+
+						<ImageView
+							android:layout_height="30dp"
+							android:layout_width="30dp"
+							android:src="@drawable/ic_check"/>
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textAppearance="?android:attr/textAppearanceSmall"
+							android:text="开始制作"
+							android:textColor="#FFFFFFFF"
+							android:textSize="15sp"/>
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_height="wrap_content"
+					android:layout_width="match_parent"
+					android:orientation="vertical"
+					android:id="@+id/w">
+
+					<LinearLayout
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content"
+						android:orientation="horizontal"
+						android:layout_marginLeft="10dp"
+						android:layout_marginTop="10dp"
+						android:gravity="center_vertical"
+						android:id="@+id/end">
+
+						<ImageView
+							android:layout_height="30dp"
+							android:layout_width="30dp"
+							android:src="@drawable/ic_check"/>
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textAppearance="?android:attr/textAppearanceSmall"
+							android:text="结束制作"
+							android:textColor="#FFFFFFFF"
+							android:textSize="15sp"/>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_height="wrap_content"
+						android:layout_width="match_parent"
+						android:orientation="vertical"
+						android:id="@+id/w_b">
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="行为包:"
+							android:layout_margin="10dp"
+							android:textSize="15sp"
+							android:textColor="#FFFFFFFF"/>
+
+						<LinearLayout
+							android:layout_height="wrap_content"
+							android:layout_width="wrap_content"
+							android:orientation="horizontal"
+							android:layout_marginLeft="20dp"
+							android:id="@+id/w_b_a">
+
+							<ImageView
+								android:layout_height="20dp"
+								android:layout_width="20dp"
+								android:src="@drawable/ic_arrow_top_right_bold_outline"/>
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:textAppearance="?android:attr/textAppearanceSmall"
+								android:text="跳转到路径"
+								android:textColor="#FFFFFBFB"
+								android:layout_marginLeft="4dp"/>
+
+						</LinearLayout>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_height="wrap_content"
+						android:layout_width="match_parent"
+						android:orientation="vertical"
+						android:id="@+id/w_r">
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="材质包:"
+							android:layout_margin="10dp"
+							android:textSize="15sp"
+							android:textColor="#FFFFFFFF"/>
+
+						<LinearLayout
+							android:layout_height="wrap_content"
+							android:layout_width="wrap_content"
+							android:orientation="horizontal"
+							android:layout_marginLeft="20dp"
+							android:id="@+id/w_r_a">
+
+							<ImageView
+								android:layout_height="20dp"
+								android:layout_width="20dp"
+								android:src="@drawable/ic_arrow_top_right_bold_outline"/>
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:textAppearance="?android:attr/textAppearanceSmall"
+								android:text="跳转到路径"
+								android:textColor="#FFFFFBFB"
+								android:layout_marginLeft="4dp"/>
+
+						</LinearLayout>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_height="wrap_content"
+						android:layout_width="match_parent"
+						android:orientation="vertical"
+						android:id="@+id/w_p">
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="PVZMOD:"
+							android:layout_margin="10dp"
+							android:textSize="15sp"
+							android:textColor="#FFFFFFFF"/>
+
+						<LinearLayout
+							android:layout_height="wrap_content"
+							android:layout_width="wrap_content"
+							android:orientation="horizontal"
+							android:layout_marginLeft="20dp"
+							android:id="@+id/w_p_a">
+
+							<ImageView
+								android:layout_height="20dp"
+								android:layout_width="20dp"
+								android:src="@drawable/ic_arrow_top_right_bold_outline"/>
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:textAppearance="?android:attr/textAppearanceSmall"
+								android:text="跳转到路径"
+								android:textColor="#FFFFFBFB"
+								android:layout_marginLeft="4dp"/>
+
+						</LinearLayout>
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:orientation="vertical"
+				android:layout_alignParentBottom="true">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					android:text="帮助"
+					android:textColor="#FFFFFFFF"
+					android:id="@+id/help"
+					android:layout_marginLeft="10dp"
+					android:textSize="16sp"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					android:text="关于"
+					android:id="@+id/about"
+					android:textColor="#FFFFFFFF"
+					android:layout_margin="10dp"
+					android:textSize="16sp"/>
+
+			</LinearLayout>
+
+		</RelativeLayout>
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:orientation="vertical"
+			android:layout_centerVertical="true"
+			android:padding="10dp"
+			android:background="@drawable/utw_bg"
+			android:layout_marginLeft="4dp"
+			android:id="@+id/utw"
+			android:visibility="gone">
+
+			<LinearLayout
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:orientation="vertical"
+				android:id="@+id/inDir">
+
+				<LinearLayout
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:orientation="horizontal"
+					android:id="@+id/add_p">
+
+					<ImageView
+						android:layout_height="20dp"
+						android:layout_width="20dp"
+						android:src="@drawable/ic_pencil_plus_outline"/>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textAppearance="?android:attr/textAppearanceSmall"
+						android:text="添加到工程"
+						android:textColor="#FFFFFBFB"
+						android:layout_marginLeft="4dp"/>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:orientation="horizontal"
+					android:layout_marginTop="4dp"
+					android:id="@+id/add_s">
+
+					<ImageView
+						android:layout_height="20dp"
+						android:layout_width="20dp"
+						android:src="@drawable/ic_link_variant_plus"/>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textAppearance="?android:attr/textAppearanceSmall"
+						android:text="添加到样本"
+						android:textColor="#FFFFFBFB"
+						android:layout_marginLeft="4dp"/>
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:orientation="horizontal"
+				android:id="@+id/importa">
+
+				<ImageView
+					android:layout_height="20dp"
+					android:layout_width="20dp"
+					android:src="@drawable/ic_link_variant_plus"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					android:text="导入PVZ CORE APK"
+					android:textColor="#FFFFFBFB"
+					android:layout_marginLeft="4dp"/>
+
+			</LinearLayout>
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/mapUse"
+				android:orientation="vertical">
+			<LinearLayout
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:orientation="horizontal"
+				android:id="@+id/importb">
+
+				<ImageView
+					android:layout_height="20dp"
+					android:layout_width="20dp"
+					android:src="@drawable/ic_link_variant_plus"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					android:text="设置Add自动导入路径"
+					android:textColor="#FFFFFBFB"
+					android:layout_marginLeft="4dp"/>
+
+			</LinearLayout>
+
+			
+
+				<LinearLayout
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:orientation="horizontal"
+					android:id="@+id/map_total">
+
+					<ImageView
+						android:layout_height="20dp"
+						android:layout_width="20dp"
+						android:src="@drawable/ic_sitemap"/>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textAppearance="?android:attr/textAppearanceSmall"
+						android:text="地图内存统计"
+						android:textColor="#FFFFFBFB"
+						android:layout_marginLeft="4dp"/>
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+	</RelativeLayout>
+
+</LinearLayout>
+

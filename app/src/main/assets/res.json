@@ -1,0 +1,73 @@
+{
+  "File": {
+    "particles": {
+      "/": {
+        "~": "k"
+      },
+      "/particle_effect/": {
+        "~": "k"
+      },
+      "/particle_effect/components/": {
+        "~": "kv"
+      },
+      "/particle_effect/description/": {
+        "~": "k"
+      },
+      "/particle_effect/description/basic_render_parameters/": {
+        "~": "kv"
+      }
+    },
+    "animation_controllers": {
+      "/": {
+        "~": "k"
+      },
+      "/animation_controllers/*/": {
+        "~": "k"
+      }
+    },
+    "entity": {
+      "/": {
+        "~": "k"
+      },
+      "/minecraft:client_entity/": {
+        "~": "k"
+      },
+      "/minecraft:client_entity/description/": {
+        "~": "k"
+      }
+    },
+    "attachables": {
+      "/": {
+        "~": "k"
+      },
+      "/minecraft:attachable/": {
+        "~": "k"
+      },
+      "/minecraft:attachable/description/": {
+        "~": "k"
+      }
+    },
+    "items": {
+      "/": {
+        "~": "k"
+      },
+      "/minecraft:item/": {
+        "~": "k"
+      },
+      "/minecraft:item/components/": {
+        "~": "k"
+      }
+    },
+    "render_controllers": {
+      "/": {
+        "~": "k"
+      },
+      "/render_controllers/": {
+        "~": "k"
+      },
+      "/render_controllers/*/": {
+        "~": "k"
+      }
+    }
+  }
+}

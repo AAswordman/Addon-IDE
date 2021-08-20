@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="match_parent"
+	android:layout_width="match_parent">
+
+	<LinearLayout
+		android:orientation="vertical"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:layout_width="match_parent"
+		android:id="@+id/editLinearLayout"
+		android:layout_height="match_parent">
+
+		<android.support.v7.widget.Toolbar
+			android:id="@+id/toolbar"
+			android:background="@color/colorPrimary"
+			android:layout_width="match_parent"
+			app:titleTextColor="#ffffff"
+			app:subtitleTextColor="#cccccc"
+			app:navigationIcon="@drawable/ic_menu2"
+			android:layout_height="?attr/actionBarSize"
+			app:title="编辑器">
+
+			<Spinner
+				android:layout_height="match_parent"
+				android:layout_width="wrap_content"
+				android:id="@+id/editSpinner"
+				android:gravity="center"/>
+
+		</android.support.v7.widget.Toolbar>
+
+		<android.support.v4.widget.DrawerLayout
+			android:id="@+id/drawer"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<android.support.constraint.ConstraintLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+				<RelativeLayout
+					android:layout_height="match_parent"
+					android:layout_width="match_parent"
+					android:background="#FF222222">
+
+					<android.support.v4.view.ViewPager
+						android:layout_height="match_parent"
+						android:layout_width="match_parent"
+						android:id="@+id/code_pager"/>
+
+					<LinearLayout
+						android:layout_height="wrap_content"
+						android:layout_width="match_parent"
+						android:orientation="vertical"
+						android:layout_alignParentBottom="true"
+						android:gravity="bottom">
+
+						<LinearLayout
+							android:layout_height="38dp"
+							android:layout_width="match_parent"
+							android:orientation="vertical"
+							android:background="#FF272727">
+
+							<android.support.v7.widget.RecyclerView
+								android:layout_height="wrap_content"
+								android:layout_width="match_parent"
+								android:id="@+id/choosefast"/>
+
+						</LinearLayout>
+
+						<LinearLayout
+							android:layout_height="0dp"
+							android:layout_width="match_parent"
+							android:orientation="vertical"
+							android:id="@+id/seizeSeat"/>
+
+					</LinearLayout>
+
+				</RelativeLayout>
+
+			</android.support.constraint.ConstraintLayout>
+
+			<android.support.constraint.ConstraintLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_gravity="start"
+				android:background="#FF242424">
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:background="#FF242424">
+
+                    <LinearLayout
+                        android:layout_height="45dp"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="file:///////"
+                            android:textSize="16sp"
+                            android:textColor="#FFFFFFFF"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:id="@+id/side_path"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_height="1dp"
+                        android:layout_width="match_parent"
+                        android:background="#FFC1C1C1"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/side_list"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"/>
+
+                </LinearLayout>
+
+			</android.support.constraint.ConstraintLayout>
+
+		</android.support.v4.widget.DrawerLayout>
+
+	</LinearLayout>
+
+	
+
+</RelativeLayout>
+
